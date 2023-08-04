@@ -24,7 +24,31 @@ namespace TaskApp.Core.Services
             {
                 tasks = tasks.Where(x => x.Accion.Contains(filter.Accion)); 
             }
+            if (filter.FinishStatus != null) 
+            {
+                tasks = tasks.Where(x => x.FinishStatus == filter.FinishStatus);
+            }
             return tasks;
         }
+
+        public async Task<bool> Insert (TbTask task)
+        {
+            return await _taskRepository.Insert(task);
+        }
+
+        public async Task<bool> Update(TbTask task)
+        {
+            return await _taskRepository.Update(task);
+        }
+        public async Task<bool> Delete(int Id)
+        {
+            return await _taskRepository.Delete(Id);
+        }
+
+        public async Task<TbTask> Get(int Id)
+        {
+            return await _taskRepository.Get(Id);
+        }
+
     }
 }

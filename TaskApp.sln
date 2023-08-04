@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskApp", "TaskApp\TaskApp.csproj", "{3D1B913E-4253-4011-B3AB-73A0BD8710EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskApp.Api", "TaskApp\TaskApp.Api.csproj", "{3D1B913E-4253-4011-B3AB-73A0BD8710EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskApp.Core", "TaskApp.Core\TaskApp.Core.csproj", "{586D2EB0-8781-4DF0-A303-40D06F10B965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskApp.Infrastructure", "TaskApp.Infrastructure\TaskApp.Infrastructure.csproj", "{79780BD9-8CCC-4B55-AB6A-F654403ED728}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3D1B913E-4253-4011-B3AB-73A0BD8710EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D1B913E-4253-4011-B3AB-73A0BD8710EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D1B913E-4253-4011-B3AB-73A0BD8710EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586D2EB0-8781-4DF0-A303-40D06F10B965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586D2EB0-8781-4DF0-A303-40D06F10B965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586D2EB0-8781-4DF0-A303-40D06F10B965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586D2EB0-8781-4DF0-A303-40D06F10B965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79780BD9-8CCC-4B55-AB6A-F654403ED728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79780BD9-8CCC-4B55-AB6A-F654403ED728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79780BD9-8CCC-4B55-AB6A-F654403ED728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79780BD9-8CCC-4B55-AB6A-F654403ED728}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

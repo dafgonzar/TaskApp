@@ -46,17 +46,9 @@ builder.Services.AddMvc(options => { }
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.  IWebHostEnvironment
-
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task.Api v1"));
 
-// Configure the HTTP request pipeline.
-//if (!app.Environment.IsDevelopment())
-//{
-//    app.UseDeveloperExceptionPage();
-//    app.UseSwagger();
-//    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EcopetrolPlaneacion.Api v1"));
-//}
 
 app.UseHttpsRedirection();
 

@@ -37,7 +37,7 @@ namespace TaskApp.Api.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet()]
         public async Task<IActionResult> Get(int Id)
         {
             var task = await _taskService.Get(Id);
@@ -47,7 +47,7 @@ namespace TaskApp.Api.Controllers
             return Ok(response);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut()]
         public async Task<IActionResult> Update(int Id, TbTask taskUpdated)
         {
             string menx = "Could not edit the record";
@@ -61,7 +61,7 @@ namespace TaskApp.Api.Controllers
             return Ok(response);
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete()]
         public async Task<IActionResult> Delete(int Id)
         {
             string menx = "Could not delete record";

@@ -40,10 +40,17 @@ builder.Services.AddMvc(options => { }
     options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
 });
 
-
+builder.Services.AddCors();
 
 
 var app = builder.Build();
+app.UseCors(builder =>
+{
+    builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+});
 
 // Configure the HTTP request pipeline.  IWebHostEnvironment
 app.UseSwagger();
@@ -51,8 +58,6 @@ app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Task.Api v1
 
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

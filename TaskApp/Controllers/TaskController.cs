@@ -67,7 +67,6 @@ namespace TaskApp.Api.Controllers
             string menx = "Could not delete record";
             var task = await _taskService.Get(Id);
             if (task == null) { return NotFound(); }
-
             var respx = await _taskService.Delete(Id);
             if (respx) { menx = "The record was successfully deleted"; }
             var response = new ApiResponse<string>(menx);
